@@ -846,8 +846,6 @@ button {
   }
   .c-nav-mobile {
     display: block;
-    width: 100%;
-    background-color: #1c1c1c;
   }
   .c-menu-mobile {
     display: flex;
