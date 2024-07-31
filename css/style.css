@@ -781,6 +781,9 @@ button {
 }
 .c-nav-mobile {
   display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 /* edit responsive */
 /* Mobile */
