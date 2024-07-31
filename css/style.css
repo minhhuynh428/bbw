@@ -758,12 +758,11 @@ button {
 }
 .c-menu-overlay {
   display: none;
-  height: 100%;
+  height: calc(100vh - 50px);
   width: 100%;
   background-color: #1c1c1c;
   overflow-y: auto;
   transition: 0.5s;
-  padding-bottom: 50px;
 }
 .c-menu-overlay.visible {
   display: block;
