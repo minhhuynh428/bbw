@@ -779,12 +779,6 @@ button {
   transform: translateY(-50%);
   pointer-events: none;
 }
-.c-nav-mobile {
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-}
 /* edit responsive */
 /* Mobile */
 @media only screen and (max-width: 912px) {
