@@ -910,6 +910,12 @@ button {
   }
   .c-nav-mobile {
     display: block;
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 2;
   }
   .c-menu-mobile {
     display: flex;
