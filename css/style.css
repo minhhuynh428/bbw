@@ -743,7 +743,7 @@ button {
   padding-left: 20px;
   padding-right: 20px;
   display: none;
-  height: 50px;
+  height: 55px;
   background-color: #000000;
 }
 .c-header-mobile_left {
@@ -903,12 +903,12 @@ button {
   }
   .c-menu-mobile li label {
     padding-left: 20px;
-    color: white;
+    color: #767676;
     font-weight: 700;
     font-size: 16px;
     margin-bottom: auto;
   }
-  .c-nav-mobile {
+  .c-nav-mobile.active {
     display: block;
     position: fixed;
     overflow-y: auto;
@@ -921,9 +921,6 @@ button {
     display: flex;
     flex-direction: column;
     max-height: 100%;
-  }
-  .l-banner {
-    display: none;
   }
 }
 

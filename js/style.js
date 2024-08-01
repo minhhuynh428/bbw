@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Chọn thẻ con có id là "hambuger-icon"
   var hambugerIcon = document.getElementById("hambuger-icon");
   var banner = document.querySelector(".l-banner");
-
+  var mobilenav = document.querySelector(".c-nav-mobile");
   // Gắn sự kiện click vào thẻ con
   if (hambugerIcon) {
     hambugerIcon.addEventListener("click", function () {
@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (menuOverlay) {
         menuOverlay.classList.toggle("visible");
         banner.classList.toggle("hidden");
+        mobilenav.classList.toggle("active");
       }
     });
   }
