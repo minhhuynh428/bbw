@@ -49,31 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Chờ DOM load hoàn toàn
-// document.addEventListener("DOMContentLoaded", function() {
-//     // Chọn thẻ con có id là "hambuger-icon"
-//     var hambugerIcon = document.getElementById("hambuger-icon");
-//     var banner = document.querySelector(".l-banner")
-//     // Gắn sự kiện click vào thẻ con
-//     if (hambugerIcon) {
-//         hambugerIcon.addEventListener("click", function() {
-//             // Chọn thẻ có class "c-menu-overlay"
-//             var menuOverlay = document.querySelector(".c-menu-overlay");
-
-//             // Kiểm tra và toggle thuộc tính display
-//             if (menuOverlay) {
-//                 if (menuOverlay.style.display === "none" || menuOverlay.style.display === "") {
-//                     menuOverlay.style.display = "block";
-//                     banner.style.display= "none"
-//                 } else {
-//                     menuOverlay.style.display = "none";
-//                     banner.style.display = "block";
-//                 }
-//             }
-//         });
-//     }
-// });
-
+//xử lý sự kiện click vào menu trong mobile, ẩn hiện các phần tử cần thiết
 document.addEventListener("DOMContentLoaded", function () {
   // Chọn thẻ con có id là "hambuger-icon"
   var hambugerIcon = document.getElementById("hambuger-icon");
@@ -95,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//gắn sticky vào header khi cuộn chuột xuống trong mobile
 window.onscroll = function () {
   stickyHeader();
 };
