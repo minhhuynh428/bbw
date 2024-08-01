@@ -759,7 +759,6 @@ button {
 }
 .c-menu-overlay {
   display: none;
-  height: 100%;
   width: 100%;
   background-color: #1c1c1c;
   overflow-y: auto;
