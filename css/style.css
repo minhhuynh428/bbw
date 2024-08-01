@@ -911,7 +911,7 @@ button {
   .c-nav-mobile {
     display: block;
     position: fixed;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
     top: 0;
     width: 100%;
@@ -921,6 +921,9 @@ button {
     display: flex;
     flex-direction: column;
     max-height: 100%;
+  }
+  .l-banner {
+    display: none;
   }
 }
 
