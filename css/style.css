@@ -549,7 +549,9 @@ pre code {
 .c-banner-item {
   text-align: center;
 }
-
+.l-head {
+  transition: top 0.3s;
+}
 .c-header {
   width: 100%;
   background-color: black;
