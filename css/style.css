@@ -743,7 +743,7 @@ button {
   padding-left: 20px;
   padding-right: 20px;
   display: none;
-  height: 55px;
+  height: 50px;
   background-color: #000000;
 }
 .c-header-mobile_left {
@@ -764,9 +764,6 @@ button {
   overflow-y: auto;
   transition: 0.5s;
 }
-.c-menu-overlay.visible {
-  display: block;
-}
 .l-banner.hidden {
   display: none;
 }
@@ -778,7 +775,12 @@ button {
   transform: translateY(-50%);
   pointer-events: none;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 /* footer */
 .l-footer {
   background-color: #000;
@@ -921,6 +923,9 @@ button {
     display: flex;
     flex-direction: column;
     max-height: 100%;
+  }
+  .c-menu-overlay.visible {
+    display: block;
   }
 }
 
