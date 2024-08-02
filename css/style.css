@@ -107,7 +107,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-html,
+
 body {
   margin: 0;
   padding: 0;
@@ -768,8 +768,6 @@ button {
   display: none;
   width: 100%;
   background-color: #1c1c1c;
-  overflow-y: auto;
-  transition: 0.5s;
 }
 .l-banner.hidden {
   display: none;
@@ -1053,6 +1051,9 @@ button {
     display: flex;
     flex-direction: column;
     align-items: start;
+  }
+  .hidden-scroll {
+    overflow-y: hidden;
   }
 }
 

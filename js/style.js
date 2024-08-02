@@ -64,11 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuOverlay.classList.toggle("visible");
         banner.classList.toggle("hidden");
         mobilenav.classList.toggle("active");
-        if (menuOverlay.classList.contains("visible")) {
-          document.body.style.overflow = "hidden"; // Disable scrolling
-        } else {
-          document.body.style.overflow = ""; // Enable scrolling
-        }
+        document.body.classList.toggle("hidden-scroll");
       }
     });
   }
