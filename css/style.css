@@ -965,10 +965,11 @@ button {
     display: block;
     position: fixed;
     overflow-y: auto;
-    height: 100vh;
+    height: 100%;
     top: 0;
     width: 100%;
     z-index: 2;
+    background-color: #1c1c1c;
   }
   .c-menu-mobile {
     display: flex;
