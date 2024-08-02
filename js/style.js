@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.stopPropagation(); // Ngăn sự kiện click lan ra bên ngoài khi click bên trong searchWrapper
   });
 });
+
 //hiển thị nút viewall
 document.addEventListener("DOMContentLoaded", function () {
   const viewallButton = document.querySelector(".c-menu-last");
@@ -71,3 +72,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //gắn sticky vào header khi cuộn chuột xuống trong mobile
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the header
+  var header = document.querySelector(".l-head");
+  var banner = document.getElementById("banner");
+  var sticky = banner.offsetHeight;
+  console.log(sticky);
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.scrollY >= sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  // Call the function to set initial state in case the page is already scrolled
+  myFunction();
+
+  // Bind the function to the scroll event
+  window.addEventListener("scroll", myFunction);
+});

@@ -544,15 +544,29 @@ pre code {
 /* edit header */
 .l-banner {
   display: block;
+  height: 400px;
+  background-color: #efefef;
 }
-.c-banner {
-  background-color: #d9d9d9;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+
 .c-banner-item {
   text-align: center;
+  overflow-x: hidden;
+  line-height: 0;
 }
+.c-header-banner {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+.c-header-banner-pc {
+  text-align: center;
+  width: 100%;
+}
+
 .l-head {
   transition: top 0.3s;
 }
@@ -919,6 +933,9 @@ button {
     padding-bottom: 0px;
     line-height: 0px;
   }
+  .l-banner {
+    height: 200px;
+  }
   .c-banner-item video {
     width: 100%;
     height: 100%;
@@ -985,7 +1002,9 @@ button {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+  }
+  .sticky + .content {
+    padding-top: 50px;
   }
   .c-footer-box__top {
     display: block; /* Thay đổi display thành block trên màn hình nhỏ */
@@ -1058,6 +1077,10 @@ button {
 }
 
 @media only screen and (min-width: 912px) and (max-width: 1122px) {
+  .l-banner {
+    display: block;
+    height: 300px;
+  }
   .container.is-line-pc {
     width: 900px;
   }
@@ -1092,5 +1115,9 @@ button {
   }
   .c-footer-box .c-footer-bottom .c-copyright {
     max-width: 65%;
+  }
+  .l-banner {
+    display: block;
+    height: 400px;
   }
 }
