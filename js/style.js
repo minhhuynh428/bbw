@@ -55,34 +55,23 @@ document.addEventListener("DOMContentLoaded", function () {
   var hambugerIcon = document.getElementById("hambuger-icon");
   var banner = document.querySelector(".l-banner");
   var mobilenav = document.querySelector(".c-nav-mobile");
+  var menuOverlay = document.querySelector(".c-menu-overlay");
   // Gắn sự kiện click vào thẻ con
   if (hambugerIcon) {
     hambugerIcon.addEventListener("click", function () {
-      // Chọn thẻ có class "c-menu-overlay"
-      var menuOverlay = document.querySelector(".c-menu-overlay");
-
       // Kiểm tra và toggle lớp CSS
       if (menuOverlay) {
         menuOverlay.classList.toggle("visible");
         banner.classList.toggle("hidden");
         mobilenav.classList.toggle("active");
+        if (menuOverlay.classList.contains("visible")) {
+          document.body.style.overflow = "hidden"; // Disable scrolling
+        } else {
+          document.body.style.overflow = ""; // Enable scrolling
+        }
       }
     });
   }
 });
 
 //gắn sticky vào header khi cuộn chuột xuống trong mobile
-window.onscroll = function () {
-  stickyHeader();
-};
-
-var header = document.querySelector(".l-head");
-var sticky = header.offsetTop;
-
-function stickyHeader() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}

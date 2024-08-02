@@ -716,7 +716,10 @@ button {
   color: white;
   font-weight: 700;
 }
-
+.c-social {
+  width: 100%;
+  text-align: end;
+}
 .c-social ul {
   display: flex;
   flex-direction: row;
@@ -856,7 +859,6 @@ button {
 .c-footer-box__left .c-footer-menu > ul {
   width: 25%;
   margin-bottom: 15px;
-  padding-right: 5px;
 }
 .c-footer-box__right {
   width: 50%;
@@ -986,14 +988,14 @@ button {
     display: block; /* Thay đổi display thành block trên màn hình nhỏ */
   }
   .c-footer-logo {
-    text-align: center;
+    text-align: start;
   }
   .c-social {
     margin-top: 10px;
     margin-bottom: 10px;
   }
   .c-social ul {
-    justify-content: center;
+    justify-content: start;
   }
   .c-footer-box__left {
     width: 100%;
@@ -1004,6 +1006,7 @@ button {
   }
   .c-footer-box__left .c-footer-menu ul {
     margin-bottom: 0;
+    width: 30%;
   }
   .c-footer-box__right {
     width: 100%;
@@ -1029,13 +1032,22 @@ button {
   .c-footer-box .c-footer-bottom .c-copyright {
     order: 1;
     max-width: 100%;
-    text-align: center;
+    text-align: start;
   }
   .c-footer-box__col {
     margin-bottom: 15px;
   }
   .c-footer-logo img {
-    height: 80px;
+    height: 50px;
+  }
+  .c-footer-box .c-footer-bottom .c-footer-other ul li {
+    margin: 0;
+  }
+  .c-footer-box .c-footer-bottom .c-footer-other ul {
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -1058,11 +1070,6 @@ button {
   .h-break-all {
     word-break: break-all;
   }
-  .c-footer-box__left .c-footer-menu > ul {
-    width: 30%;
-    margin-bottom: 15px;
-    padding-right: 5px;
-  }
 }
 @media only screen and (min-width: 1123px) and (max-width: 1334px) {
   .container.is-line-pc {
@@ -1076,5 +1083,8 @@ button {
   }
   .c-search-box {
     width: 1107px;
+  }
+  .c-footer-box .c-footer-bottom .c-copyright {
+    max-width: 65%;
   }
 }
