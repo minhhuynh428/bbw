@@ -1074,6 +1074,9 @@ button {
   .hidden-scroll {
     overflow-y: hidden;
   }
+  .c-logo-mobile a > img {
+    height: 35px;
+  }
 }
 
 @media only screen and (min-width: 912px) and (max-width: 1122px) {
