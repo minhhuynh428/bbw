@@ -541,7 +541,7 @@ pre code {
   word-break: normal;
 }
 
-/* edit header */
+/* edit banner */
 .l-banner {
   display: block;
   height: 400px;
@@ -566,7 +566,12 @@ pre code {
   text-align: center;
   width: 100%;
 }
+.l-banner.hidden {
+  display: none;
+}
+/* end edit banner */
 
+/* edit header */
 .l-head {
   transition: top 0.3s;
 }
@@ -614,8 +619,7 @@ pre code {
   color: #000000; /* Màu chữ đen */
   padding: 6px 20px;
 }
-/* end edit header */
-/* edit icon */
+
 button {
   background: none;
   border: none;
@@ -623,7 +627,7 @@ button {
   margin: 0;
   cursor: pointer;
 }
-/* end edit icon */
+
 .c-search-wrapper {
   background-color: #1c1c1c;
   position: absolute;
@@ -783,9 +787,6 @@ button {
   width: 100%;
   background-color: #1c1c1c;
 }
-.l-banner.hidden {
-  display: none;
-}
 
 .input-icon {
   position: absolute;
@@ -794,6 +795,7 @@ button {
   transform: translateY(-50%);
   pointer-events: none;
 }
+/* end edit header */
 
 /* footer */
 .l-footer {
@@ -915,7 +917,7 @@ button {
 /* edit responsive */
 /* Mobile */
 @media only screen and (max-width: 912px) {
-  /* edit header */
+  /* edit header and banner*/
   .c-logo img {
     max-width: 300px;
     height: 46px;
@@ -1006,8 +1008,14 @@ button {
   .sticky + .content {
     padding-top: 50px;
   }
+  .hidden-scroll {
+    overflow-y: hidden;
+  }
+  /*end edit header and banner*/
+
+  /* edit footer */
   .c-footer-box__top {
-    display: block; /* Thay đổi display thành block trên màn hình nhỏ */
+    display: block;
   }
   .c-footer-logo {
     text-align: start;
@@ -1071,12 +1079,10 @@ button {
     flex-direction: column;
     align-items: start;
   }
-  .hidden-scroll {
-    overflow-y: hidden;
-  }
   .c-logo-mobile a > img {
     height: 35px;
   }
+  /* end edit footer */
 }
 
 @media only screen and (min-width: 912px) and (max-width: 1122px) {
