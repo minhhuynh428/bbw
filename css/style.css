@@ -573,7 +573,7 @@ pre code {
 
 /* edit header */
 .l-head {
-  transition: top 0.3s;
+  transition: top 0.3s ease;
 }
 .c-header {
   width: 100%;
@@ -913,7 +913,20 @@ button {
   flex-wrap: wrap;
 }
 /* end footer */
-
+.l-head.ontop {
+  top: -450px;
+}
+.l-head.adjust {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.l-head.adjust + .l-footer.content {
+  padding-top: 170px;
+}
+.l-head.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ */
+}
 /* edit responsive */
 /* Mobile */
 @media only screen and (max-width: 912px) {
@@ -1083,15 +1096,31 @@ button {
     height: 35px;
   }
   /* end edit footer */
+  /* test */
+  .l-head.adjust {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease;
+  }
+  .l-head.adjust + .l-footer.content {
+    padding-top: 50px;
+  }
+
+  /* Hiệu ứng bóng mờ */
+  .l-head.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ */
+  }
 }
 
 @media only screen and (min-width: 912px) and (max-width: 1122px) {
+  .container.is-line-pc {
+    width: 900px;
+  }
+  /* edit header and banner */
   .l-banner {
     display: block;
     height: 300px;
-  }
-  .container.is-line-pc {
-    width: 900px;
   }
   .c-menu-outer {
     width: 900px;
@@ -1105,14 +1134,20 @@ button {
   .c-search-box {
     width: 900px;
   }
+  /* end edit header and banner */
+
+  /* edit footer */
   .h-break-all {
     word-break: break-all;
   }
+  /* end edit footer */
 }
 @media only screen and (min-width: 1123px) and (max-width: 1334px) {
   .container.is-line-pc {
     width: 1107px;
   }
+
+  /* edit header and banner */
   .c-menu-outer {
     width: 1107px;
   }
@@ -1122,11 +1157,15 @@ button {
   .c-search-box {
     width: 1107px;
   }
-  .c-footer-box .c-footer-bottom .c-copyright {
-    max-width: 65%;
-  }
   .l-banner {
     display: block;
     height: 400px;
   }
+  /* end edit header and banner */
+
+  /* edit footer */
+  .c-footer-box .c-footer-bottom .c-copyright {
+    max-width: 65%;
+  }
+  /* end edit footer */
 }
