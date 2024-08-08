@@ -797,6 +797,115 @@ button {
 }
 /* end edit header */
 
+/* edit content */
+.l-content-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.l-content-flex .l-main {
+  padding: 30px;
+  width: calc(100% - 440px);
+}
+.l-content-flex .l-sidebar {
+  width: 440px;
+}
+.l-main.is-right-line-pc {
+  border-right: 1px solid #b2b2b2;
+}
+.l-content .container.is-line-pc {
+  border-right: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
+}
+.c-head__top {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+.c-head__left a > img {
+  width: 440px;
+  height: 300px;
+}
+.b-grid__title a {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.b-grid__summary a {
+  color: #767676;
+}
+.b-grid__log {
+  color: #767676;
+}
+.c-head__bottom {
+  border-top: 1px solid #ececec;
+  padding-top: 30px;
+}
+.c-head__bottom ul {
+  display: flex;
+  gap: 30px;
+}
+.c-head__bottom ul li .b-grid .b-grid__title a {
+  font-size: 16px;
+}
+.c-head__bottom ul li {
+  padding-right: 30px;
+  border-right: 1px solid #ececec;
+}
+.c-head__bottom ul li:last-child {
+  border-right: none;
+}
+
+/* end edit content */
+
+/* edit sidebar */
+.c-banner-item__box {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid #b2b2b2;
+}
+.slideshow-container {
+  margin: auto;
+}
+.c-issue-items {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid #b2b2b2;
+}
+/* Fading animation */
+.mySlides.fade a {
+  font-weight: bold;
+  display: block;
+  padding-top: 20px;
+  color: #000;
+  font-size: 16px;
+}
+.dot-nav {
+  display: block;
+  padding-top: 10px;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #000000;
+}
+/* end edit sidebar */
+
 /* footer */
 .l-footer {
   background-color: #000;
@@ -921,11 +1030,11 @@ button {
   top: 0;
   width: 100%;
 }
-.l-head.adjust + .l-footer.content {
+.l-head.adjust + .l-content {
   padding-top: 170px;
 }
 .l-head.shadow {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* edit responsive */
 /* Mobile */
@@ -1013,14 +1122,14 @@ button {
   .c-menu-overlay.visible {
     display: block;
   }
-  .sticky {
+  /* .sticky {
     position: fixed;
     top: 0;
     width: 100%;
   }
   .sticky + .content {
     padding-top: 50px;
-  }
+  } */
   .hidden-scroll {
     overflow-y: hidden;
   }
@@ -1103,7 +1212,7 @@ button {
     width: 100%;
     transition: top 0.3s ease;
   }
-  .l-head.adjust + .l-footer.content {
+  .l-head.adjust + .l-content {
     padding-top: 50px;
   }
 
