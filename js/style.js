@@ -190,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//xử lý slider
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -201,18 +202,25 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
+
   if (n > slides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
     slideIndex = slides.length;
   }
+
+  // Ẩn tất cả các slide
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
+  // Loại bỏ class 'active' khỏi tất cả các dots
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].classList.remove("active");
   }
+
+  // Hiển thị slide hiện tại và thêm class 'active' vào dot tương ứng
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  dots[slideIndex - 1].classList.add("active");
 }
