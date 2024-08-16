@@ -108,7 +108,8 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -1094,11 +1095,17 @@ button {
 /* edit responsive */
 /* Mobile */
 @media only screen and (max-width: 768px) {
+  .c-head {
+    padding: 20px;
+  }
   .c-head__top {
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 20px;
   }
-
+  .c-head__bottom {
+    padding-top: 20px;
+  }
   .c-head__left,
   .c-head__right {
     width: 100%;
@@ -1110,6 +1117,22 @@ button {
 
   .b-grid__title a {
     font-size: 24px;
+  }
+  .b-grid__title h2 {
+    font-size: 24px;
+  }
+  .c-head__bottom ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .c-head__bottom ul li {
+    border-bottom: 1px solid #ececec;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .c-head__bottom ul li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0px;
   }
 }
 @media only screen and (max-width: 912px) {
@@ -1193,17 +1216,6 @@ button {
   }
   .c-menu-overlay.visible {
     display: block;
-  }
-  /* .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .sticky + .content {
-    padding-top: 50px;
-  } */
-  .hidden-scroll {
-    overflow-y: hidden;
   }
   /*end edit header and banner*/
   /* edit content */
