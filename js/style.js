@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
         menuOverlay.classList.toggle("visible");
         banner.classList.toggle("hidden");
         mobilenav.classList.toggle("active");
-        // document.body.classList.toggle("hidden-scroll");
         if (menuOverlay.classList.contains("visible")) {
           document.documentElement.style.overflowY = "hidden";
         } else {
