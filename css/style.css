@@ -1105,10 +1105,10 @@ button {
   .c-head__top {
     flex-direction: column;
     gap: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   .c-head__bottom {
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .c-head__left,
   .c-head__right {
@@ -1126,6 +1126,7 @@ button {
     gap: 10px;
   }
   .c-head__bottom ul li {
+    border-right: 0;
     border-bottom: 1px solid #ececec;
     padding-right: 0;
     padding-bottom: 10px;
@@ -1133,6 +1134,59 @@ button {
   .c-head__bottom ul li:last-child {
     border-bottom: 0;
     padding-bottom: 0px;
+  }
+  .c-widget.is-bottom-line {
+    padding: 20px 20px 10px 20px;
+  }
+  .c-widget__title {
+    padding-bottom: 10px;
+  }
+  .c-template-list.is-col-2 .b-grid .b-grid__content a {
+    font-size: 24px;
+  }
+  .c-template-list.is-col-2 ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .c-template-list.is-col-2 ul li {
+    width: 100%;
+  }
+  .b-grid__img {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .b-grid__desc {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+  }
+  .c-template-list.is-col-3 {
+    border-top: 0;
+    padding-top: 20px;
+  }
+  .c-template-list.is-col-3 ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .c-template-list.is-col-3 ul li {
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+  }
+  .c-template-list.is-col-3 ul li:last-child {
+    width: 100%;
+    border-bottom: 0;
+  }
+  .c-template-list.is-col-3 ul li .b-grid {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  .c-template-list.is-col-3 .b-grid__img {
+    padding-bottom: 10px;
+  }
+  .c-template-list.is-col-3 .b-grid__img img {
+    width: 130px;
+    height: 84px;
   }
 }
 @media only screen and (max-width: 912px) {
