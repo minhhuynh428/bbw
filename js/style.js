@@ -126,37 +126,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//xử lý slider
-let slideIndex = 1;
-showSlides(slideIndex);
+// handling slider
+document.querySelectorAll(".bullet").forEach(function (bullet) {
+  bullet.addEventListener("click", function () {
+    let slideIndex = this.getAttribute("data-slide");
+    let slider = document.querySelector(".slider");
+    slider.style.transform = "translateX(-" + slideIndex * 100 + "%)";
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+    // Update active bullet
+    document.querySelectorAll(".bullet").forEach(function (b) {
+      b.classList.remove("active");
+    });
+    this.classList.add("active");
+  });
+});
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  // Ẩn tất cả các slide
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  // Loại bỏ class 'active' khỏi tất cả các dots
-  for (i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("active");
-  }
-
-  // Hiển thị slide hiện tại và thêm class 'active' vào dot tương ứng
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].classList.add("active");
-}
+// Set the first bullet as active by default
+document.querySelector(".bullet").classList.add("active");

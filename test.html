@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Example</title>
+    <style>
+      .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 300%; /* Điều chỉnh theo số lượng slide */
+      }
+
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column; /* Sắp xếp theo cột để văn bản nằm dưới hình ảnh */
+        justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+        align-items: center; /* Căn giữa nội dung theo chiều ngang */
+        padding: 20px; /* Thêm khoảng cách giữa hình ảnh và văn bản */
+      }
+
+      .slide img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .slide p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #333;
+        text-align: center; /* Căn giữa văn bản */
+      }
+
+      .slider-bullets {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .bullet {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .bullet.active {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="./images/issue-7-cover.png" alt="Slide 1" />
+          <p>Description for Slide 1</p>
+        </div>
+        <div class="slide">
+          <img src="image2.jpg" alt="Slide 2" />
+          <p>Description for Slide 2</p>
+        </div>
+        <div class="slide">
+          <img src="image3.jpg" alt="Slide 3" />
+          <p>Description for Slide 3</p>
+        </div>
+      </div>
+      <div class="slider-bullets">
+        <span class="bullet" data-slide="0"></span>
+        <span class="bullet" data-slide="1"></span>
+        <span class="bullet" data-slide="2"></span>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".bullet").forEach(function (bullet) {
+        bullet.addEventListener("click", function () {
+          let slideIndex = this.getAttribute("data-slide");
+          let slider = document.querySelector(".slider");
+          slider.style.transform = "translateX(-" + slideIndex * 100 + "%)";
+
+          // Update active bullet
+          document.querySelectorAll(".bullet").forEach(function (b) {
+            b.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Set the first bullet as active by default
+      document.querySelector(".bullet").classList.add("active");
+    </script>
+  </body>
+</html>
