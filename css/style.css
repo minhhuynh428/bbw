@@ -572,6 +572,9 @@ pre code {
   color: #ffffff; /* Màu chữ đen */
   font-weight: 600; /* Độ dày chữ Semi Bold */
 }
+.btn-log:hover {
+  color: #ccc;
+}
 .btn {
   cursor: pointer;
   border-radius: 5px;
@@ -580,7 +583,19 @@ pre code {
   font-weight: 700;
   background-color: #ffffff; /* Màu nền trắng */
   color: #000000; /* Màu chữ đen */
-  padding: 6px 20px;
+  padding: 4px 20px;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+}
+.btn-reg:hover {
+  color: white;
+  background-color: #333333;
+  border-color: #767676;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
 }
 
 button {
@@ -772,11 +787,16 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.l-content-flex.is-bottom-line.is-last {
+  border-right: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
+}
 .l-content-flex .l-main {
   width: calc(100% - 33.3333333333%);
 }
 .l-content-flex .l-sidebar {
   width: 33.3333333333%;
+  border-bottom: 1px solid #b2b2b2;
 }
 .l-main.is-right-line-pc {
   border-right: 1px solid #b2b2b2;
@@ -860,11 +880,11 @@ button {
   display: block;
   border-top: 1px solid #ececec;
 }
-.c-widget.is-bottom-line.is-swell .c-template-list.is-col-3 {
+.c-widget__content.is-swell .c-template-list.is-col-3 {
   padding-top: 0px;
   border-top: 0;
 }
-.c-widget.is-bottom-line.is-swell .c-template-list.is-col-3:last-child {
+.c-widget__content.is-swell .c-template-list.is-col-3:last-child {
   padding-top: 30px;
   border-top: 0;
 }
@@ -872,8 +892,45 @@ button {
   display: flex;
   gap: 30px;
 }
+.c-template-list.is-col-4 ul {
+  display: flex;
+  gap: 20px;
+}
+.c-template-list.is-col-4 .b-grid__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+}
+.c-template-list.is-col-4 .b-grid__content .b-grid__desc {
+  color: white;
+  margin-top: auto;
+  padding: 0;
+}
 .c-template-list.is-col-3 ul li {
   width: 33.3333333333%;
+}
+.c-template-list.is-col-4 ul li {
+  padding: 20px;
+  background-color: #000000;
+  width: 25%;
+  border-radius: 5px;
+}
+.c-template-list.is-col-4 .b-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+.c-template-list.is-col-4 .b-grid .b-grid__date {
+  color: white;
+  font-size: 16px;
+}
+.c-template-list.is-col-4 .b-grid h3 {
+  font-size: 20px;
+}
+.c-template-list.is-col-4 .b-grid h3 a {
+  color: white;
 }
 .c-widget.is-bottom-line {
   padding: 30px;
@@ -892,6 +949,9 @@ button {
 .b-grid__img {
   display: block;
   padding-bottom: 30px;
+}
+.c-template-list.is-col-4 .b-grid__img {
+  padding-bottom: 0px;
 }
 .b-grid__img a img {
   width: 100%;
@@ -921,6 +981,66 @@ button {
   padding-bottom: 30px;
   color: #767676;
 }
+.slider.topic-slider .slide a {
+  font-size: 28px;
+  line-height: 34px;
+}
+.c-banner-item__inner .c-banner-item__box {
+  border-bottom: none;
+  padding: 0;
+}
+.c-newsletter-inner {
+  padding: 64px;
+  border-right: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
+}
+.c-newsletter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-newsletter-box__label {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+}
+.form-control {
+  margin-left: 30px;
+  width: 345px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding-left: 10px;
+}
+
+.c-newsletter-box .btn {
+  margin-left: 20px;
+  width: 132px;
+  height: 35px;
+  padding: 0px 16px 0px 16px;
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.c-newsletter-box .btn:hover {
+  background-color: #333333; /* Màu nền nhạt hơn khi hover */
+  transform: translateY(-2px); /* Nâng nút lên nhẹ khi hover */
+}
+.c-banner-item__inner {
+  padding: 30px;
+  border-right: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+}
+.c-special-report__inner {
+  border-right: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 30px;
+}
 /* end edit content */
 
 /* edit sidebar */
@@ -947,7 +1067,6 @@ button {
 }
 
 .slide {
-  /* padding: 30px 30px 0 30px; */
   min-width: 100%;
   box-sizing: border-box;
 }
@@ -1197,6 +1316,12 @@ button {
 }
 .c-footer-box__content p {
   margin-bottom: 10px;
+}
+.c-footer-box__content a {
+  color: white;
+}
+.c-footer-box__link a {
+  color: white;
 }
 .c-footer-box__link ul li {
   margin-bottom: 10px;

@@ -80,6 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".l-head");
   var navbarHeight = header.offsetHeight;
   var ticking = false;
+  // Hàm tính toán lại chiều cao khi thay đổi kích thước màn hình
+  function updateHeights() {
+    bannerHeight = banner.offsetHeight;
+    navbarHeight = header.offsetHeight;
+  }
+  // Gọi lại hàm updateHeights khi cửa sổ thay đổi kích thước
+  window.addEventListener("resize", function () {
+    updateHeights();
+  });
 
   window.addEventListener("scroll", function () {
     if (!ticking) {
@@ -127,19 +136,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // handling slider
-document.querySelectorAll(".bullet").forEach(function (bullet) {
-  bullet.addEventListener("click", function () {
-    let slideIndex = this.getAttribute("data-slide");
-    let slider = document.querySelector(".slider");
-    slider.style.transform = "translateX(-" + slideIndex * 100 + "%)";
+document.querySelectorAll(".slider-container").forEach(function (container) {
+  // Tìm các bullets và slider tương ứng bên trong container hiện tại
+  let bullets = container.querySelectorAll(".bullet");
+  let slider = container.querySelector(".slider");
 
-    // Update active bullet
-    document.querySelectorAll(".bullet").forEach(function (b) {
-      b.classList.remove("active");
+  // Lặp qua mỗi bullet để gán sự kiện click
+  bullets.forEach(function (bullet, index) {
+    bullet.addEventListener("click", function () {
+      // Dịch chuyển slider dựa trên slideIndex
+      slider.style.transform = "translateX(-" + index * 100 + "%)";
+
+      // Cập nhật active bullet chỉ trong slider này
+      bullets.forEach(function (b) {
+        b.classList.remove("active");
+      });
+      bullet.classList.add("active");
     });
-    this.classList.add("active");
   });
-});
 
-// Set the first bullet as active by default
-document.querySelector(".bullet").classList.add("active");
+  // Đặt bullet đầu tiên là active mặc định
+  if (bullets.length > 0) {
+    bullets[0].classList.add("active");
+  }
+});
