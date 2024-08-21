@@ -801,6 +801,15 @@ button {
 .l-main.is-right-line-pc {
   border-right: 1px solid #b2b2b2;
 }
+.l-main.is-right-line-pc .c-banner-item__box {
+  display: none;
+}
+.l-main.is-right-line-pc .c-most-pop {
+  display: none;
+}
+.l-main.is-right-line-pc .c-issue-items {
+  display: none;
+}
 .l-content .container.is-line-pc {
   border-right: 1px solid #b2b2b2;
   border-left: 1px solid #b2b2b2;
@@ -1070,6 +1079,16 @@ button {
   min-width: 100%;
   box-sizing: border-box;
 }
+.slider .slide img {
+  width: 100%;
+}
+.slider.topic-slider .slide img {
+  width: 100%;
+}
+
+.slider.topic-slider a {
+  padding-top: 30px;
+}
 
 .slide a {
   display: block;
@@ -1163,6 +1182,7 @@ button {
   font-weight: 700;
   width: 20%;
   color: #a4a4a4;
+  white-space: nowrap;
 }
 .c-pop-right {
   font-size: 16px;
@@ -1366,10 +1386,6 @@ button {
   .c-head__right {
     width: 100%;
   }
-
-  .b-grid__title a {
-    font-size: 24px;
-  }
   .b-grid__title h2 {
     font-size: 24px;
   }
@@ -1439,6 +1455,64 @@ button {
   .c-template-list.is-col-3 .b-grid__img img {
     width: 130px;
     height: 84px;
+  }
+  .l-main.is-right-line-pc .c-banner-item__box {
+    display: block;
+  }
+  .slider.topic-slider .slide a {
+    font-size: 24px;
+    line-height: 29px;
+    padding-top: 10px;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid {
+    padding: 30px;
+    background-color: #000000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid .b-grid__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid a {
+    color: white;
+    text-align: start;
+    padding-top: 0;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid .b-grid__img {
+    padding-bottom: 10px;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid .b-grid__date {
+    color: white;
+    padding-bottom: 10px;
+  }
+  .c-special-report__mob .slider.topic-slider .slide .b-grid .b-grid__desc {
+    color: white;
+    border-bottom: 0;
+    margin-top: auto;
+  }
+  .c-widget__content.is-swell .c-template-list.is-col-3 .b-grid {
+    flex-direction: row;
+  }
+  .c-widget__content.is-swell .c-template-list.is-col-3:last-child {
+    padding-top: 10px;
+    border-top: 1px solid #ececec;
+  }
+  .c-special-report__inner {
+    display: none;
+  }
+  .c-special-report__mob {
+    border-right: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 20px;
   }
 }
 @media only screen and (max-width: 912px) {
@@ -1547,8 +1621,54 @@ button {
   .l-content .container.is-line-pc {
     border: none;
   }
+  .slider.topic-slider .slide img {
+    width: 100%;
+  }
+  .l-main.is-right-line-pc .c-most-pop {
+    display: block;
+    padding: 20px;
+  }
+  .l-main.is-right-line-pc .c-most-pop .c-pop-left {
+    width: 50px;
+  }
+  .c-most-pop h3 {
+    font-size: 16px;
+  }
+  .l-main.is-right-line-pc .c-issue-items {
+    display: block;
+    padding: 20px;
+  }
+  .l-main.is-right-line-pc .c-issue-items .list-issue a {
+    padding-top: 0;
+  }
+  .c-chart {
+    padding: 20px;
+  }
+  .c-opinion {
+    padding: 20px;
+  }
+  .c-newsletter-box {
+    flex-direction: column;
+  }
+  .c-newsletter-inner {
+    padding: 20px;
+  }
+  .c-newsletter-box__label {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .c-newsletter-box form {
+    display: flex;
+  }
+  .form-control {
+    width: 200px;
+    height: 35px;
+  }
   /* end edit content */
   /* edit footer */
+  .c-footer-box {
+    padding: 20px;
+  }
   .c-footer-box__top {
     display: block;
   }
@@ -1603,7 +1723,7 @@ button {
     margin-bottom: 15px;
   }
   .c-footer-logo img {
-    height: 50px;
+    height: 65px;
   }
   .c-footer-box .c-footer-bottom .c-footer-other ul li {
     margin: 0;
@@ -1667,6 +1787,19 @@ button {
   }
   .l-main.is-right-line-pc {
     border-right: none;
+  }
+  .l-main.is-right-line-pc .c-most-pop {
+    display: block;
+    padding: 20px;
+  }
+  .l-main.is-right-line-pc .c-most-pop .c-pop-left {
+    width: 50px;
+  }
+  .c-most-pop h3 {
+    font-size: 16px;
+  }
+  .c-newsletter-box {
+    flex-direction: column;
   }
   /* end edit content */
 
