@@ -159,4 +159,47 @@ document.querySelectorAll(".slider-container").forEach(function (container) {
   if (bullets.length > 0) {
     bullets[0].classList.add("active");
   }
+
+  // Thêm tính năng vuốt trái/phải cho slider
+  let startX = 0;
+  let currentX = 0;
+  let isSwiping = false;
+  let slideIndex = 0;
+
+  container.addEventListener("touchstart", function (e) {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+
+  container.addEventListener("touchmove", function (e) {
+    if (!isSwiping) return;
+    currentX = e.touches[0].clientX;
+  });
+
+  container.addEventListener("touchend", function () {
+    if (!isSwiping) return;
+    let diffX = startX - currentX;
+
+    if (Math.abs(diffX) > 50) {
+      // Kiểm tra nếu vuốt đủ xa để được tính là một swipe
+      if (diffX > 0 && slideIndex < bullets.length - 1) {
+        // Vuốt sang trái
+        slideIndex++;
+      } else if (diffX < 0 && slideIndex > 0) {
+        // Vuốt sang phải
+        slideIndex--;
+      }
+
+      // Dịch chuyển slider dựa trên slideIndex
+      slider.style.transform = "translateX(-" + slideIndex * 100 + "%)";
+
+      // Cập nhật active bullet
+      bullets.forEach(function (b) {
+        b.classList.remove("active");
+      });
+      bullets[slideIndex].classList.add("active");
+    }
+
+    isSwiping = false; // Đặt lại trạng thái vuốt
+  });
 });
